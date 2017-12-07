@@ -5,19 +5,13 @@ import axios from 'axios';
 
 class App extends Component {
 
-  constructor(){
-    super();
-    this.state = {
-      students: []
-    };
-  };
-
   componentDidMount(){
     axios.get('http://localhost:3000/getStudents')
       .then((response)=>{
         console.log(response)
       });
   }
+
   render() {
     return (
       <div className="App">
